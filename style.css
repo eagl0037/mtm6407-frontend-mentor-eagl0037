@@ -1,0 +1,160 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Overpass', sans-serif;
+  line-height: 1.6;
+  color: #2c2c2c;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header styles */
+.header {
+  background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  color: white;
+  padding: 2rem 0;
+  position: relative;
+}
+.logo {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.5rem;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-auth {
+  margin-left: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+.login-btn {
+  color: white;
+}
+.signup-btn {
+  background: white;
+  color: hsl(353, 100%, 62%);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+.header-content {
+  text-align: center;
+  margin-top: 3rem;
+}
+.header-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.cta-buttons a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 20px;
+}
+.start-btn {
+  background: white;
+  color: hsl(353, 100%, 62%);
+}
+.learn-btn {
+  border: 1px solid white;
+  color: white;
+}
+
+/* Mobile menu toggle */
+.mobile-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+}
+
+/* Features section */
+.features {
+  padding: 4rem 0;
+}
+.feature-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.feature-content .text {
+  flex: 1;
+}
+.feature-content .image {
+  flex: 1;
+}
+.feature-content img {
+  max-width: 100%;
+}
+
+/* Footer styles */
+.footer {
+  background: hsl(240, 10%, 16%);
+  color: white;
+  padding: 2rem 0;
+}
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.footer-columns h4 {
+  margin-bottom: 0.5rem;
+}
+.footer-columns ul li a {
+  color: hsl(0, 0%, 90%);
+  font-size: 0.9rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links,
+  .nav-auth {
+    display: none;
+    flex-direction: column;
+    background: white;
+    color: black;
+    padding: 1rem;
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    z-index: 1000;
+  }
+  .navbar.active .nav-links,
+  .navbar.active .nav-auth {
+    display: flex;
+  }
+  .mobile-toggle {
+    display: block;
+  }
+  .feature-content {
+    flex-direction: column;
+  }
+  .footer-columns {
+    flex-direction: column;
+  }
+}
