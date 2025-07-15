@@ -17,14 +17,14 @@ body {
   background: linear-gradient(to right, #ff8f70, #ff3d54);
   position: relative;
   overflow: hidden;
-  padding-bottom: 6rem;
-  border-bottom-left-radius: 100px;
+
+  
 }
 
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+ 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -133,6 +133,7 @@ body {
 .hero-content h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  justify-content: center;
 }
 
 .hero-content p {
@@ -313,4 +314,45 @@ footer {
     flex-direction: column;
     text-align: center;
   }
+}
+
+
+
+/* Dropdowns */
+.dropbtn,
+.dropdown-content a,
+.login,
+.signup {
+  transition: all 0.3s ease;
+}
+
+/* Auth Buttons Hover */
+.signup:hover {
+  background: #ff7a85;
+  color: white;
+}
+
+.login:hover {
+  opacity: 0.8;
+}
+
+/* Links */
+.dropdown-content a:hover,
+.footer-links a:hover {
+  color: #ff3d54;
+}
+
+/* CTA Buttons */
+.cta button {
+  transition: all 0.3s ease;
+}
+
+.start:hover {
+  background-color: #ff7a85;
+  color: white;
+}
+
+.learn:hover {
+  background-color: white;
+  color: #ff3d54;
 }
