@@ -4,85 +4,139 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blogr Landing Page</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="container nav-container">
+  <header class="hero-header">
+    <div class="nav-container">
       <h1 class="logo">Blogr</h1>
-      <nav id="navbar" class="navbar">
-        <ul class="nav-links">
-          <li><a href="#">Product</a></li>
-          <li><a href="#">Company</a></li>
-          <li><a href="#">Connect</a></li>
-        </ul>
-        <div class="nav-auth">
-          <a href="#" class="login-btn">Login</a>
-          <a href="#" class="signup-btn">Sign Up</a>
+      <nav class="desktop-nav">
+        <div class="dropdown">
+          <button class="dropbtn">Product</button>
+          <div class="dropdown-content">
+            <a href="#">Overview</a>
+            <a href="#">Pricing</a>
+            <a href="#">Marketplace</a>
+            <a href="#">Features</a>
+            <a href="#">Integrations</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Company</button>
+          <div class="dropdown-content">
+            <a href="#">About</a>
+            <a href="#">Team</a>
+            <a href="#">Blog</a>
+            <a href="#">Careers</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Connect</button>
+          <div class="dropdown-content">
+            <a href="#">Contact</a>
+            <a href="#">Newsletter</a>
+            <a href="#">LinkedIn</a>
+          </div>
         </div>
       </nav>
-      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">☰</button>
+      <div class="auth-buttons">
+        <button class="login">Login</button>
+        <button class="signup">Sign Up</button>
+      </div>
+      <button class="mobile-toggle" id="mobile-toggle">☰</button>
     </div>
-    <div class="header-content">
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#">Product</a>
+      <a href="#">Company</a>
+      <a href="#">Connect</a>
+      <hr />
+      <a href="#">Login</a>
+      <a href="#" class="signup">Sign Up</a>
+    </div>
+
+    <div class="hero-content">
       <h2>A modern publishing platform</h2>
       <p>Grow your audience and build your online brand</p>
-      <div class="cta-buttons">
-        <a href="#" class="start-btn">Start for Free</a>
-        <a href="#" class="learn-btn">Learn More</a>
+      <div class="cta">
+        <button class="start">Start for Free</button>
+        <button class="learn">Learn More</button>
       </div>
     </div>
+    <img src="https://jolly-kalam-23776e.netlify.app/images/bg-pattern-intro.svg" alt="Hero Pattern" class="hero-pattern">
   </header>
 
-  <main>
-    <section class="features">
-      <div class="container">
-        <h2>Designed for the future</h2>
-        <div class="feature-content">
-          <div class="text">
-            <h3>Introducing an extensible editor</h3>
-            <p>Blogr features an exceedingly intuitive interface...</p>
-            <h3>Robust content management</h3>
-            <p>Flexible content management enables users...</p>
-          </div>
-          <div class="image">
-            <img src="illustration-editor-desktop.png" alt="Editor Illustration" />
-          </div>
+  <section class="future">
+    <div class="content">
+      <h2>Designed for the future</h2>
+      <div class="grid-two">
+        <div class="text">
+          <h3>Introducing an extensible editor</h3>
+          <p>Blogr features an intuitive interface. It supports Markdown, image embeds, and themes.</p>
+          <h3>Robust content management</h3>
+          <p>Flexible content management enables users to move through posts and customize flow.</p>
+        </div>
+        <div class="image">
+          <img src="editor.png" alt="Editor">
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer class="footer">
-    <div class="container">
-      <h2>Blogr</h2>
-      <div class="footer-columns">
-        <div>
-          <h4>Product</h4>
-          <ul>
-            <li><a href="#">Overview</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Marketplace</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Team</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Connect</h4>
-          <ul>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Newsletter</a></li>
-          </ul>
-        </div>
+  <section class="infrastructure-section">
+    <img src="https://jolly-kalam-23776e.netlify.app/images/bg-pattern-circles.svg" class="circle-pattern" alt="">
+    <div class="infrastructure-content">
+      <div class="image">
+        <img src="phones.png" alt="Phones">
+      </div>
+      <div class="text">
+        <h2>State of the Art Infrastructure</h2>
+        <p>Worldwide data centers ensure your site loads instantly for readers anywhere.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="laptop">
+    <div class="grid-two reverse">
+      <div class="image">
+        <img src="laptop.png" alt="Laptop">
+      </div>
+      <div class="text">
+        <h3>Free, open, simple</h3>
+        <p>Backed by a helpful dev community, Blogr is easy to extend, monitor, and manage.</p>
+        <h3>Powerful tooling</h3>
+        <p>Our CLI makes deployment a breeze without getting in your way.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <h3>Blogr</h3>
+    <div class="footer-links">
+      <div>
+        <h4>Product</h4>
+        <a href="#">Overview</a>
+        <a href="#">Pricing</a>
+        <a href="#">Marketplace</a>
+        <a href="#">Features</a>
+        <a href="#">Integrations</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Team</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <a href="#">Contact</a>
+        <a href="#">Newsletter</a>
+        <a href="#">LinkedIn</a>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
